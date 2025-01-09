@@ -1,4 +1,10 @@
+import { Bebas_Neue } from "next/font/google";
 import "./globals.css";
+
+const bebasNeue = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -7,7 +13,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={bebasNeue.className}>
       <body className={`antialiased bg-black text-white text-center`}>
         {children}
       </body>
